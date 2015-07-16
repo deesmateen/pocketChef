@@ -15,9 +15,5 @@ app.controller('favsCtrl', function($scope, recipeService){
 	// 		console.log(response)
 	// 	})
 	// }
-	$scope.showModal = false;
 
-	$scope.toggleModal = function() {
-	    $scope.showModal = !$scope.showModal;
-	}
 });

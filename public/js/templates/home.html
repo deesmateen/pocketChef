@@ -8,6 +8,8 @@
 			<div class="col s12 "></div>
 			</div>
 				<div class="nav-wrapper">
+					<!-- Modal Trigger -->
+					<button data-target="modal1" class="btn modal-trigger">Modal</button>
 					<a href="#/home" class="brand-logo center">Pocket Chef</a>
 					<ul class="right hide-on-med-and-down">
 						<li class="tab active card-panel  waves-effect waves-light"><a href="#/home">Home</a></li>
@@ -18,7 +20,6 @@
 		</div>
 	</nav>
 </div>
-
 
 <div class="box">
 	<div class="row">
@@ -52,6 +53,30 @@
 	</div>
 </div>
 
+<div id="modal1" class="modal">
+	<div class="modal-content">
+		<h4>Modal Header</h4>
+		<div class="input-field col s6">
+				 <i class="material-icons prefix">perm_identity</i>
+				 <input ng-model="email" id="emailIcon" type="email" class="validate">
+				 <label for="emailIcon">Email</label>
+		</div>
+		<div class="input-field col s6">
+				 <i class="material-icons prefix">email</i>
+				 <input ng-model="password" id="passwordIcon" type="password" class="validate">
+				 <label for="passwordIcon">Password</label>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<a ng-click="createUser(email, password)" class="btn-large waves-effect waves-light blue">Register<i class="material-icons"></i></a>
+	</div>
+</div>
+
+<script>  $(document).ready(function(){
+	// the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+	$('.modal-trigger').leanModal();
+	});
+</script>
 
 <!-- <div class="top-container">
 		<div class="header"><p> Pocket Chef</p>

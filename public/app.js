@@ -11,6 +11,11 @@ app.config(function($routeProvider){
 		templateUrl: 'js/templates/home.html',
 		controller: 'homeCtrl'
 	})
+	.when('/user', {
+		templateUrl: 'js/templates/userRegister',
+		controller: 'userCtrl'
+	})
+
 	.when('/recipes', {
 		templateUrl: 'js/templates/recipes.html',
 		controller: 'recipesCtrl'

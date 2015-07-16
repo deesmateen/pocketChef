@@ -3,6 +3,10 @@ var Recipe = require('../model/recipe.js');
 
 var exports = module.exports = {};
 
+exports.loginUser = function(req, res) {
+  return res.status(200).json(req.user)
+};
+
 exports.read = function(req, res){
   Recipe.find({}, function(err, result){
     console.log('read stuff')
@@ -11,12 +15,12 @@ exports.read = function(req, res){
   })
 }
 
-exports.create = function(req, res){
-  var newRecipe = new Recipe(req.body.recipe[0]);
-  newRecipe.save(function(err, result){
-    console.log('req.body.recipe', req.body.recipe)
+exports.createUser = function(req, res){
+  var newUser = new User(req.body);
+  newUser.save(function(err, user){
+    console.log('req.body', req.body)
     if(err) return res.status(500).json(err)
-    return res.json(result);
+    return res.json(user);
   })
 }
 
@@ -25,15 +29,6 @@ exports.get = function(req, res){
     console.log('find some crap')
     if(err) return res.status(500).json(err)
     return res.json(result);
-  })
-}
-
-exports.post = function(req, res){
-  var newUser = new User(req.body);
-  newUser.save(function(err, result){
-      console.log('create some crap')
-      if(err) return res.status(500).json(err)
-      return res.json(result);
   })
 }
 

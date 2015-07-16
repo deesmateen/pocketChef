@@ -4,9 +4,7 @@ app.service('recipeService', function($http, $q){
 
 	this.getRecipe = function(ingredients){
 		var ingredients = ingredients.ingredient1 + ',' + ingredients.ingredient2 + ',' + ingredients.ingredient3 + ',' + ingredients.ingredient4 + ',' + ingredients.ingredient5;
-
 		var dfd = $q.defer();
-
 		$http({
 			method: "GET",
 			url: 'http://api.bigoven.com/recipes?include_ing='  +  ingredients + '&pg=1&rpp=20&api_key=gQstXR865iEkjEehU9n4z7D1Cy1qTtvG'
@@ -32,10 +30,35 @@ app.service('recipeService', function($http, $q){
 				console.log(error);
 				dfd.reject(error);
 			})
-
-
 		return dfd.promise;
 	}
+	this.getRandomImages = function (images){
+		var dfd = $q.defer();
+		$http({
+			method: "GET",
+			url: "http://api.bigoven.com/images"
+		}).then(function(response){
+			console.log('Pics of fooood', response)
+			dfd.resolve(response.data)
+		});
+		return dfd.promise;
+	};
+
+	this.createUser = function(email, password){
+		var dfd = $q.defer();
+				$http({
+			method: "POST",
+			url: "/api/user/create",
+			data: {
+				email: email,
+				password: password
+			}
+		}).then(function(response){
+			console.log('new user', response)
+			dfd.resolve(response.data)
+		});
+		return dfd.promise;
+	};
 });
 	this.postRecipe = function(meal){
 		console.log('helloooo')
@@ -47,32 +70,3 @@ app.service('recipeService', function($http, $q){
 			}
 		})
 }
-// http post to mongo
-	// this.getRecipe = function(ingredients){
-	// 	console.log('ingredients', ingredients.ingredient1);
-	// 	var dfd = $q.defer();
-	// 	$http({
-	// 		method: 'GET',
-		// 	url: 'http://api.pearson.com:80/kitchen-manager/v1/recipes?ingredients-all=' + "," +  ingredients.ingredient1 + "," + ingredients.ingredient2 + "," + ingredients.ingredient3
-		// })
-	// 	.then(function(data){
-	// 	console.log(data)
-		// var newArr = [];
-		// for(var i = 0; i < data.data.results.length; i++){
-		// 	var newObj = {};
-		// 	newObj['Name'] = data.data.results[i].name;
-		// 	newObj['Cuisine'] = data.data.results[i].cuisine;
-		// 	newObj['Image'] = data.data.results[i].image;
-		// 	newObj['CookingMethod'] = data.data.results[i].cooking_method;
-		// 	newObj['Url'] = data.data.results[i].url;
-		// 	newArr.push(newObj);
-		// 	}
-		// 	console.log(newArr)
-		// 	dfd.resolve(newArr);
-		// }, function(error){
-		// 	console.log(error);
-		// 	dfd.reject(error);
-		// })
-	//
-	// 	return dfd.promise;
-	// };
