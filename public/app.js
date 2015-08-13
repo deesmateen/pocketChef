@@ -1,10 +1,5 @@
 var app = angular.module('pocketChef', ['ngRoute']);
 
-//fireRoot top level of data set in firebase, the url we use to reference.
-// app.constant('fireRoot', {
-// 	url: "https://pocket-chef.firebaseio.com/"
-// })
-
 app.config(function($routeProvider){
 	$routeProvider
 	.when('/home', {
@@ -12,13 +7,17 @@ app.config(function($routeProvider){
 		controller: 'homeCtrl'
 	})
 	.when('/user', {
-		templateUrl: 'js/templates/userRegister',
+		templateUrl: 'js/templates/user.html',
 		controller: 'userCtrl'
 	})
 
 	.when('/recipes', {
 		templateUrl: 'js/templates/recipes.html',
 		controller: 'recipesCtrl'
+	})
+	.when('/meals', {
+		templateUrl: 'js/templates/meals.html',
+		controller: 'mealsCtrl'
 	})
 	.when('/favs', {
 		templateUrl: 'js/templates/favs.html',
@@ -33,7 +32,7 @@ app.config(function($routeProvider){
 		// 	}
 		// }
 	})
-	.otherwise({
-		redirectTo: '/home'
-	})
+	// .otherwise({
+	// 	redirectTo: '/home'
+	// })
 })

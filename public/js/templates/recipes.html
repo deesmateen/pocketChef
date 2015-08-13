@@ -12,7 +12,7 @@
 					<ul class="right hide-on-med-and-down">
 						<li class="card-panel hoverable transparent waves-effect waves-light"><a href="#/home">Home</a></li>
 						<li class="active card-panel  waves-effect waves-light"><a href="#/recipes">Recipes</a></li>
-						<li class="card-panel hoverable transparent waves-effect waves-light"><a href="#/favs">Favs</a></li>
+						<li class="card-panel hoverable transparent waves-effect waves-light"><a href="#/meals">Meals</a></li>
 					</ul>
 				</div>
 		</div>
@@ -21,35 +21,64 @@
 
 <div class="box">
 	<div class="row">
-		<div class="row">
-		<div class="col s12 "></div>
-		</div>
-		<div class="row">
-		<div class="col s12 "></div>
-		</div>
-	</div>
-	<div class="row">
 		<div class="col s8 offset-s1">
 			<div class="bucket z-depth-5 transparent">
+				<h3 class="recipe-content-header">Enter in the ingredients you have</h3>
 					<div class="row">
 						<form>
-							<div class="row">
-								<div class="col s11 offset-s1">
-									<input placeholder="ingredient 1" ng-model="ingredients.ingredient1">
-									<input placeholder="ingredient 2" ng-model="ingredients.ingredient2">
-									<input placeholder="ingredient 3" ng-model="ingredients.ingredient3">
-									<input placeholder="ingredient 4" ng-model="ingredients.ingredient4">
-									<input placeholder="ingredient 5" ng-model="ingredients.ingredient5">
-									<button ng-click="getRecipe()" type="submit">Get Recipes</button>
-									<div ng-repeat="recipe in recipeData" class="recipe-container hoverable white-text">
-										<a class="image modal-trigger" href="{{recipe.WebURL}}"><img src="{{recipe.ImageURL120}}">
-											<div id="modal" class="modal"></div>
-										</a>,
-										Recipe Name:	{{recipe.Title}},
-										Cuisine:	{{recipe.Cuisine}},
-										Yield Amount:	{{recipe.YieldNumber}},
-										Rating: {{recipe.StarRating}},
+							<div>
+								<div class="recipes-search-list">
+									<input class="ingredients-content" placeholder="ingredient 1" ng-model="ingredients.ingredient1">
+									<input class="ingredients-content" placeholder="ingredient 2" ng-model="ingredients.ingredient2">
+									<input class="ingredients-content" placeholder="ingredient 3" ng-model="ingredients.ingredient3">
+									<input class="ingredients-content" placeholder="ingredient 4" ng-model="ingredients.ingredient4">
+									<input class="ingredients-content" placeholder="ingredient 5" ng-model="ingredients.ingredient5">
+									<button ng-click="getNewRecipe()" type="submit">Get Recipes</button>
+								</div>
+								<div class="row">
+									<div class="col s10 offset-s1">
+										<div ng-repeat="recipe in recipeData" class="recipe-container hoverable white-text">
+											<div>
+												<span><a target="_blank"  href="{{recipe.WebURL}}" class="image" ><img src="{{recipe.ImageURL}}">
+												</a></span>
+													<div class="row">
+														<div class="recipes-content-container col s10 offset-s1">
+														<span class="white-text"><h4 class="white-text-alignment">{{recipe.Title}}, Cuisine: {{recipe.Cuisine}}</h4>
+														</span>
+														<button class="thumbUp material-icons black-text" ng-click="addToUserFavs(recipe.WebURL)" >thumb_up
+											    	</button>
+														</div>
+													</div>
+										</div>
 									</div>
+								</div>
+							</div>
+
+
+									<!-- MODAL CODE -->
+									<div class="row recipeModalSpace">
+									<div class="col s12"></div>
+									</div>
+									<!-- <div id="modal1" class="modal recipePopUp">
+										<div class="modal-content">
+											<h3>
+												{{activeRecipe.Title}}
+												<h4>{{activeRecipe.Cuisine}}</h4>
+											</h3>
+											{{ activeRecipe.Instructions}}
+											{{activeRecipe.WebURL}}
+										</div>
+									</div> -->
+
+									<!-- <script>
+										angular.element(document).ready(function(){
+										angular.element('.modal-trigger').leanModal();
+										});
+									</script> -->
+									<!-- END MODAL CODE -->
+
+
+
 								</div>
 							</div>
 						</form>
@@ -58,10 +87,8 @@
 		</div>
 	</div>
 </div>
-<!-- <div ng-repeat="recipe in recipeData">
-	{{recipe.CookingMethod}},
-	{{recipe.Name}},
-	{{recipe.Cuisine}}
-	<img src="{{recipe.Image}}">
-</div>
-</div> -->
+
+<!-- <button data-target="modal2" class="btn modal-trigger"></button> -->
+
+<!-- modal trigger added to the class on the a link and href="modal2 or whatever I name it" and
+the modal just play with for location, to do the favs will require a sessions part -->

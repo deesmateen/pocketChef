@@ -1,4 +1,4 @@
-<!-- <div class="navbar-fixed">
+<div class="navbar-fixed">
 	<nav>
 		<div class="header z-depth-5">
 			<div class="row">
@@ -12,6 +12,7 @@
 					<ul class="right hide-on-med-and-down">
             <li class="card-panel hoverable transparent waves-effect waves-light"><a href="#/home">Home</a></li>
 						<li class="card-panel hoverable transparent waves-effect waves-light"><a href="#/recipes">Recipes</a></li>
+						<li class="card-panel hoverable transparent waves-effect waves-light"><a href="#/meals">Meals</a></li>
 						<li class="active card-panel  waves-effect waves-light"><a href="#/favs">Favs</a></li>
 					</ul>
 				</div>
@@ -20,57 +21,48 @@
 </div>
 
 <div class="box">
-		<div class="row">
-		<div class="col s12 "></div>
-		</div>
-		<div class="row">
-		<div class="col s12 "></div>
-		</div>
-		<div class="row">
-		<div class="col s12 "></div>
-		</div>
-		<div class="row">
-		<div class="col s12 "></div>
-		</div>
-		<div class="row">
-		<div class="col s12 "></div>
-		</div>
-</div> -->
+    <div class="row bridge">
+    <div class="col s12 "></div>
+    </div>
+    <div class="row">
+      <div class="col s12 offset-s4">
+				<div ng-repeat="favorite in favorites track by $index" class="favorites-container">
+						{{ favorite }}
+				</div>
 
-<div class="slider">
-    <ul class="slides">
-      <li>
-        <img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
-        <div class="caption center-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        <!-- <div class="slider">
+            <ul class="slides">
+              <li>
+                <img src="http://redirect.bigoven.com/pics/red-velvet-cupcakes-50.jpg">
+                <div class="caption center-align">
+                  <h4 class="light blue-text text-lighten-3">Red Velvet Cup</h4>
+                </div>
+              </li>
+              <li>
+                <img src="http://redirect.bigoven.com/pics/slow-cooker-beef-tacos-4.jpg">
+                <div class="caption left-align">
+                  <h4 class="light blue-text text-lighten-3">Slow Cooker Beef Tacos</h4>
+                </div>
+              </li>
+              <li>
+                <img src="http://redirect.bigoven.com/pics/supremepizzaburgers-e1fd77.jpg">
+                <div class="caption right-align">
+                  <h4 class="light blue-text text-lighten-3">Supreme Pizza Hamburgers</h4>
+                </div>
+              </li>
+              <li>
+                <img src="http://redirect.bigoven.com/pics/country-fried-steak-with-white-grav-2.jpg">
+                <div class="caption center-align">
+                  <h4 class="light blue-text text-lighten-3">Country Fried Steak</h4>
+                </div>
+              </li>
+            </ul>
+          </div> -->
         </div>
-      </li>
-      <li>
-        <img src="http://lorempixel.com/580/250/nature/2"> <!-- random image -->
-        <div class="caption left-align">
-          <h3>Left Aligned Caption</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-      <li>
-        <img src="http://lorempixel.com/580/250/nature/3"> <!-- random image -->
-        <div class="caption right-align">
-          <h3>Right Aligned Caption</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-      <li>
-        <img src="http://lorempixel.com/580/250/nature/4"> <!-- random image -->
-        <div class="caption center-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-    </ul>
-  </div>
+      </div>
+    	<script>$(document).ready(function(){
+          $('.slider').slider({full_width: true, interval: 3000, height: 200});
+        });
+    	</script>
 
-	<script>$(document).ready(function(){
-      $('.slider').slider({full_width: true, interval: 3000});
-    });
-	</script>
+</div>

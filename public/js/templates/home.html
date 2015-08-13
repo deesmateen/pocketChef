@@ -9,12 +9,13 @@
 			</div>
 				<div class="nav-wrapper">
 					<!-- Modal Trigger -->
-					<button data-target="modal1" class="btn modal-trigger">Modal</button>
+						<li data-target="modal1" class="userLoginButton modal-trigger card-panel hoverable transparent waves-effect waves-light">Login</li>
 					<a href="#/home" class="brand-logo center">Pocket Chef</a>
 					<ul class="right hide-on-med-and-down">
-						<li class="tab active card-panel  waves-effect waves-light"><a href="#/home">Home</a></li>
+						<li class="active card-panel  waves-effect waves-light"><a href="#/home">Home</a></li>
 						<li class="card-panel hoverable transparent waves-effect waves-light"><a href="#/recipes">Recipes</a></li>
-						<li class="card-panel hoverable transparent waves-effect waves-light"><a href="#/favs">Favs</a></li>
+						<li class="card-panel hoverable transparent waves-effect waves-light"><a href="#/meals">Meals</a></li>
+						<!-- <li class="card-panel hoverable transparent waves-effect waves-light"><a href="#/favs">Favs</a></li> -->
 					</ul>
 				</div>
 		</div>
@@ -23,32 +24,125 @@
 
 <div class="box">
 	<div class="row">
-		<div class="row">
-		<div class="col s12 "></div>
-		</div>
 		<div class="col s12"></div>
-		<div class="cooking-button col s8 offset-s5">
-			<a href="#/recipes" div class="waves-effect hoverable waves-light btn white black-text ">Lets Get Cooking </a>
-			<a href="#/recipes"></a>
-		</div>
-		<div class="row">
-		<div class="col s12 "></div>
-		</div>
-		<div class="row">
-		<div class="col s12 "></div>
-		</div>
-		<div class="row">
-		<div class="col s12 "></div>
-		</div>
-		<div class="row">
-		<div class="col s12 "></div>
-		</div>
-		<div class="row">
-		<div class="col s12 "></div>
-		</div>
-		<div class="col s8 offset-s1">
-			<div class="contain z-depth-5 transparent">
+				<!-- <div class="row">
+		      <div class="col s12">
+		        <div class="slider left-slider">
+		            <ul class="slides left-slides">
+		              <li>
+		                <img src="http://redirect.bigoven.com/pics/red-velvet-cupcakes-50.jpg">
+		                <div class="caption center-align">
+		                  <h5 class="light grey-text text-lighten-3"></h5>
+		                </div>
+		              </li>
+		              <li>
+		                <img src="http://redirect.bigoven.com/pics/slow-cooker-beef-tacos-4.jpg">
+		                <div class="caption left-align">
+		                  <h3></h3>
+		                  <h5 class="light grey-text text-lighten-3"></h5>
+		                </div>
+		              </li>
+		              <li>
+		                <img src="http://redirect.bigoven.com/pics/supremepizzaburgers-e1fd77.jpg">
+		                <div class="caption right-align">
+		                  <h3></h3>
+		                  <h5 class="light grey-text text-lighten-3"></h5>
+		                </div>
+		              </li>
+		              <li>
+		                <img src="http://redirect.bigoven.com/pics/country-fried-steak-with-white-grav-2.jpg">
+		                <div class="caption center-align">
+		                  <h3></h3>
+		                  <h5 class="light grey-text text-lighten-3"></h5>
+		                </div>
+		              </li>
+		            </ul>
+		          </div>
+		        </div>
+		      </div>
+		    	<script>$(document).ready(function(){
+		          $('.slider').slider({full_width: true, interval: 3000, height: 350});
+		        });
+		    	</script> -->
+
+			<!-- <div class="row">
+	      <div class="col s12">
+	        <div class="slider2">
+	            <ul class="slides">
+	              <li>
+	                <a ng-href="http://www.bigoven.com/recipe/chocolate-zucchini-cake-recipe/163472"><img src="http://redirect.bigoven.com/pics/chocolate-zucchini-cake-recipe.jpg"></a>
+	                <div class="caption2 center-align">
+	                  <h3></h3>
+	                  <h5 class="light grey-text text-lighten-3"></h5>
+	                </div>
+	              </li>
+	              <li>
+	                <a ng-href="http://www.bigoven.com/recipe/roasted-cider-brined-pork-loin-with-green-tomato-chutney/713162"><img src="http://redirect.bigoven.com/pics/roasted-cider-brined-pork-loin-with-5.jpg"></a>
+	                <div class="caption2 left-align">
+	                  <h3></h3>
+	                  <h5 class="light grey-text text-lighten-3"></h5>
+	                </div>
+	              </li>
+	              <li>
+	                <a ng-href="http://www.bigoven.com/recipe/slow-cooker-barbacoa-tacos/736207"><img src="http://redirect.bigoven.com/pics/slow-cooker-barbacoa-tacos.jpg"></a>
+	                <div class="caption2 right-align">
+	                  <h3></h3>
+	                  <h5 class="light grey-text text-lighten-3"></h5>
+	                </div>
+	              </li>
+	              <li>
+	                <a ng-href="http://www.bigoven.com/recipe/southwest-chicken-salad/748691"><img src="http://redirect.bigoven.com/pics/southwest-chicken-salad-4.jpg"></a>
+	                <div class="caption2 center-align">
+	                  <h3></h3>
+	                  <h5 class="light grey-text text-lighten-3"></h5>
+	                </div>
+	              </li>
+	            </ul>
+	          </div>
+	        </div>
+	      </div>
+	    <script>$(document).ready(function(){
+	        $('.slider2').slider({full_width: true, interval: 3000, height: 350});
+	        });
+	  	</script> -->
+
+		<div class="container">
+			<div>
+				<div>
+					<h5 class="homePageIngredientsText white-text">Are you stuck on what to cook or bored with the same old?
+						<br>
+
+						<br> Click on the spatula to plug in the ingredients you have and find the perfect recipe</h5>
+				</div>
 			</div>
+			<div class="spatulaSpacing">
+				<div>
+			<a ng-href="#/recipes"><i class="mc mc-spatulagrill mc-5x white-text gly-spin"></i></a>
+				</div>
+			</div>
+		</div>
+		<div>
+			<!-- <a href="#/recipes" div class="waves-effect hoverable waves-light btn white black-text ">Lets Get Cooking </a> -->
+			<div>
+				<div>
+			<h5 class="homePageMealsText white-text">Click on the pizza to start find a recipe</h5>
+				</div>
+			</div>
+			<div class="row spatulaSpacing">
+				<div class="col s12">
+				<a ng-href="#/meals"><i class="mc mc-pizza mc-5x white-text gly-spin"></i></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+		<div class="col s12 "></div>
+		</div>
+		<div class="row cross">
+		<div class="col s12 "></div>
+		</div>
+		<div class="col s8 offset-s3">
+			<!-- <img class="contain z-depth-5 transparent responsive-img" src="https://download.unsplash.com/reserve/EnF7DhHROS8OMEp2pCkx_Dufer%20food%20overhead%20hig%20res.jpg"> -->
 		</div>
 	</div>
 </div>
@@ -68,52 +162,21 @@
 		</div>
 	</div>
 	<div class="modal-footer">
-		<a ng-click="createUser(email, password)" class="btn-large waves-effect waves-light blue">Register<i class="material-icons"></i></a>
+		<div class="row">
+		<div class="col s5">
+			<a ng-click="loginUser(email, password)" class="login-button btn-large waves-effect waves-light blue">Login<i class="material-icons"></i></a>
+		</div>
+
+		<div class="col s6">
+			<a ng-click="createUser(email, password)" class="btn-large waves-effect waves-light blue">Register<i class=" material-icons"></i></a>
+		</div>
+		<h5>New to Pocket Chef? Register here to get started</h5>
+	</div>
 	</div>
 </div>
 
-<script>  $(document).ready(function(){
+<script>  angular.element(document).ready(function(){
 	// the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-	$('.modal-trigger').leanModal();
+	angular.element('.modal-trigger').leanModal();
 	});
 </script>
-
-<!-- <div class="top-container">
-		<div class="header"><p> Pocket Chef</p>
-			<div class="right-container">
-				<a href="#/home"><button class="home-button">Home</button></a>
-				<a href="#/start"><button class="start-button">Start</button></a>
-				<a href="#/recipe"><button class="recipe-button">Recipes</button></a>
-			</div>
-		</div>
-	</div>
-<div>
-				<a href="#/start"><button class="button">Click here to start</button></a>
-				<div class="left-box">
-					<input class="username" placeholder="Username">
-					<input class="password" placeholder="Password">
-				</div>
-				<div class="main-box">
-					<div class="option white">
-						<input class="text" placeholder="Enter Ingrediant" autocomplete"on">
-						<input class="text-small" placeholder="Text" autocomplete"on"></input>
-					</div>
-					<div class="option blue">
-						<input class="text" placeholder="Enter Ingrediant" autocomplete"on"></input>
-						<input class="text-small" placeholder="Text" autocomplete"on"></input>
-					</div>
-					<div class="option red">
-						<input class="text" placeholder="Enter Ingrediant" autocomplete"on"></input>
-						<input class="text-small" placeholder="Text" autocomplete"on"></input>
-					</div>
-					<div class="option yellow">
-						<input class="text" placeholder="Enter Ingrediant" autocomplete"on"></input>
-						<input class="text-small" placeholder="Text" autocomplete"on"></input>
-					</div>
-					<div class="option green">
-						<input class="text" placeholder="Enter Ingrediant" autocomplete"on"></input>
-						<input class="text-small" placeholder="Text" autocomplete"on"></input>
-					</div>
-				</div>
-				<div class="right-box"></div>
-</div> -->

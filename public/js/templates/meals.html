@@ -1,0 +1,67 @@
+<div class="navbar-fixed">
+	<nav>
+		<div class="header z-depth-5">
+			<div class="row">
+			<div class="col s12"></div>
+			</div>
+			<div class="row">
+			<div class="col s12"></div>
+			</div>
+				<div class="nav-wrapper">
+					<a href="#/home" class="brand-logo center">Pocket Chef</a>
+					<ul class="right hide-on-med-and-down">
+						<li class="tab active card-panel  waves-effect waves-light"><a href="#/home">Home</a></li>
+						<li class="card-panel hoverable transparent waves-effect waves-light"><a href="#/recipes">Recipes</a></li>
+						<li class="active card-panel  waves-effect waves-light"><a href="#/meals">Meals</a></li>
+					</ul>
+				</div>
+		</div>
+	</nav>
+</div>
+
+<div class="box">
+	<div class="row userMealSpace">
+			<div class="col s12 "></div>
+	</div>
+		<div class="row">
+			<div class="col s10 offset-s1">
+				<div class="bucket z-depth-5 transparent">
+					<div class="row">
+						<form>
+							<div class="row">
+								<div class="col s11 offset-s5">
+								<input placeholder="Meal Name" ng-model="meal">
+								<button ng-click="getNewMeal()" type="submit">Find Meal</button>
+							</div>
+								<div ng-repeat="meal in mealData" class="meal-container hoverable white-text">
+								<div>
+									<div class="row">
+										<div class="col s8 offset-s2">
+									<a target="_blank" href="{{meal.WebURL}}"><img src="{{meal.ImageURL}}"></img></a>
+									<span><h4>{{meal.Title}}</h4>
+									Quality Score: {{meal.QualityScore}} Yield Number: {{meal.YieldNumber}}
+									<button class="thumbUp material-icons black-text" ng-click="addToUserFavs(recipe.WebURL)" >thumb_up
+									</button>
+								</span>
+								</div>
+								</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		<!-- New jQuery modal -->
+		<!-- <p><a class='iframe' href="http://wikipedia.com">Outside Webpage (Iframe)</a></p>
+		<script>
+			$(document).ready(function(){
+				$(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
+			});
+			$("#click").click(function(){
+					$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+					return false;
+				});
+		</script> -->
