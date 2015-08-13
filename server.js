@@ -7,7 +7,7 @@ var express = require('express')
     , LocalStrategy = require('passport-local').Strategy
     , bcrypt = require('bcrypt')
     , session = require('express-session')
-    , port = 80;
+    , port = process.env.EXPRESS_PORT || 8020;
 
 app.use(bodyParser.json());
 app.use(cors());

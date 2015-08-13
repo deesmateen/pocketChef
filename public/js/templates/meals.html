@@ -29,9 +29,12 @@
 					<div class="row">
 						<form>
 							<div class="row">
-								<div class="col s11 offset-s5">
-								<input placeholder="Meal Name" ng-model="meal">
-								<button ng-click="getNewMeal()" type="submit">Find Meal</button>
+								<div class="">
+									<h3 class="meals-content-header">Enter the meal you would like to cook</h3>
+								<div class="meal-name">
+									<input placeholder="Meal Name" ng-model="meal">
+									<button ng-click="getNewMeal()" type="submit">Find Meal</button>
+								</div>
 							</div>
 								<div ng-repeat="meal in mealData" class="meal-container hoverable white-text">
 								<div>

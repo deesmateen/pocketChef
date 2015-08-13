@@ -95,6 +95,14 @@ html, body{
 	color: white
 }
 
+.meals-content-header {
+	text-align: center;
+	color: white;
+}
+
+.meal-name {
+	text-align: center;
+}
 .recipe-container img {
 	max-width: 200px;
 	max-height: 200px;
@@ -312,4 +320,8 @@ html, body{
 .thumbUp {
 	background: transparent;
 	margin: 0 0 0 150px
+}
+
+.modal {
+	height: 35%
 }
