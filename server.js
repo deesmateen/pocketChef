@@ -9,6 +9,7 @@ var express = require('express')
     , session = require('express-session')
     , port = process.env.EXPRESS_PORT || 8020;
 
+app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 app.use(cors());
 app.use(session({ secret: '2020pocketchef2020' }));
@@ -32,7 +33,6 @@ var mongoUri = 'mongodb://localhost/pocket-chef';
 mongoose.connect(mongoUri);
 
 var userCtrl = require('./controllers/usercontroller.js');
-app.use(express.static(__dirname + '/public'));
 
 
 passport.use(new LocalStrategy(function(username, password, done){
